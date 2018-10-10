@@ -12,9 +12,14 @@
 		944AD6B0216DE94D00B9D08D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6AE216DE94D00B9D08D /* Main.storyboard */; };
 		944AD6B2216DE94F00B9D08D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B1216DE94F00B9D08D /* Assets.xcassets */; };
 		944AD6B5216DE94F00B9D08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B3216DE94F00B9D08D /* LaunchScreen.storyboard */; };
+		944AD6BD216DEA2100B9D08D /* MediatedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AD6BC216DEA2100B9D08D /* MediatedAd.swift */; };
+		DBE8B4157F602C412B789D5A /* Pods_adsolutions_ios_AdMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adsolutions_ios_AdMediation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA335971DEDB531DF918337 /* Pods-adsolutions-ios-AdMediation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adsolutions-ios-AdMediation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation.debug.xcconfig"; sourceTree = "<group>"; };
+		416DD461FB9111A8E262BE20 /* Pods-adsolutions-ios-AdMediation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-adsolutions-ios-AdMediation.release.xcconfig"; path = "Pods/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation.release.xcconfig"; sourceTree = "<group>"; };
 		944AD6A7216DE94D00B9D08D /* adsolutions-ios-AdMediation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "adsolutions-ios-AdMediation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		944AD6AA216DE94D00B9D08D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		944AD6AC216DE94D00B9D08D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		944AD6B1216DE94F00B9D08D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		944AD6B4216DE94F00B9D08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		944AD6B6216DE94F00B9D08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944AD6BC216DEA2100B9D08D /* MediatedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediatedAd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE8B4157F602C412B789D5A /* Pods_adsolutions_ios_AdMediation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FDE2925B209BEAF12C8F081 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AA335971DEDB531DF918337 /* Pods-adsolutions-ios-AdMediation.debug.xcconfig */,
+				416DD461FB9111A8E262BE20 /* Pods-adsolutions-ios-AdMediation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		68787A48F1F8AA5B72DE48B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		944AD69E216DE94D00B9D08D = {
 			isa = PBXGroup;
 			children = (
 				944AD6A9216DE94D00B9D08D /* adsolutions-ios-AdMediation */,
 				944AD6A8216DE94D00B9D08D /* Products */,
+				1FDE2925B209BEAF12C8F081 /* Pods */,
+				68787A48F1F8AA5B72DE48B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,7 @@
 		944AD6A9216DE94D00B9D08D /* adsolutions-ios-AdMediation */ = {
 			isa = PBXGroup;
 			children = (
+				944AD6BC216DEA2100B9D08D /* MediatedAd.swift */,
 				944AD6AA216DE94D00B9D08D /* AppDelegate.swift */,
 				944AD6AC216DE94D00B9D08D /* ViewController.swift */,
 				944AD6AE216DE94D00B9D08D /* Main.storyboard */,
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 944AD6B9216DE94F00B9D08D /* Build configuration list for PBXNativeTarget "adsolutions-ios-AdMediation" */;
 			buildPhases = (
+				6A4FC6DCA36470BC37E5B14F /* [CP] Check Pods Manifest.lock */,
 				944AD6A3216DE94D00B9D08D /* Sources */,
 				944AD6A4216DE94D00B9D08D /* Frameworks */,
 				944AD6A5216DE94D00B9D08D /* Resources */,
+				BD75244AB9CDA398F67B8F75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +159,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A4FC6DCA36470BC37E5B14F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-adsolutions-ios-AdMediation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD75244AB9CDA398F67B8F75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AppNexusSDK/AppNexusSDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppNexusSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		944AD6A3216DE94D00B9D08D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +215,7 @@
 			files = (
 				944AD6AD216DE94D00B9D08D /* ViewController.swift in Sources */,
 				944AD6AB216DE94D00B9D08D /* AppDelegate.swift in Sources */,
+				944AD6BD216DEA2100B9D08D /* MediatedAd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +359,7 @@
 		};
 		944AD6BA216DE94F00B9D08D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA335971DEDB531DF918337 /* Pods-adsolutions-ios-AdMediation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +377,7 @@
 		};
 		944AD6BB216DE94F00B9D08D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 416DD461FB9111A8E262BE20 /* Pods-adsolutions-ios-AdMediation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
