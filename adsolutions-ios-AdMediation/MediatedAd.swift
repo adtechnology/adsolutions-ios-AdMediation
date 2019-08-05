@@ -13,31 +13,32 @@ import AppNexusSDK
 
 //import GoogleMobileAds
 
-//import DTBiOSSDK
+import DTBiOSSDK
 
-
-class MediatedAd: ANBannerAdView /*,DTBAdCallback*/ {
+class MediatedAd: ANBannerAdView ,DTBAdCallback {
     
     let amzn_SlotUUID:String
-    
+    var azloader:DTBAdLoader
+    var azsize:DTBAdSize
     //(instancetype)initWithFrame:(CGRect)frame memberId:(NSInteger)memberId inventoryCode:(NSString *)inventoryCode adSize:(CGSize)size;
     
     init(frame:CGRect,memberId:NSInteger, inventoryCode:String, adWidth:NSInteger, adHeight:NSInteger, andSlotUUID:String){
         
         self.amzn_SlotUUID = andSlotUUID
+        self.azloader = DTBAdLoader()
+        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: adWidth, height: adHeight, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
         
         super.init(frame:frame, memberId:memberId, inventoryCode:inventoryCode, adSize:CGSize(width:adWidth, height:adHeight))
         
         self.autoRefreshInterval = 0   // Set to 0 to disable auto-refresh.
         
         print("---MediatedAd.init SlotID "+andSlotUUID)
-        /*
-        let azsize = DTBAdSize.init(bannerAdSizeWithWidth: adWidth, height: adHeight, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
         
-        let azloader:DTBAdLoader = DTBAdLoader()
         
-        azloader.setAdSizes([azsize,nil])
-        */
+        
+        
+        
+        
         
         
     }
@@ -47,27 +48,46 @@ class MediatedAd: ANBannerAdView /*,DTBAdCallback*/ {
     
     
     override func loadAd() {
+        print("-----Test1-----")
+        self.azloader = DTBAdLoader()
+        print("-----Test2-----")
+        azloader.setAdSizes([azsize])
+        print("-----Test3-----")
+        self.azloader.loadAd(self)
+        //super.loadAd()
         
-        super.loadAd()
-        
-        print("-----Test-----")
+        print("-----Test4-----")
         
     }
-    /*
     func onFailure(_ error: DTBAdError) {
-        
-        
+        print("-----onFailure-----")
+        //super.loadAd()
         
     }
     
     
     
     func onSuccess(_ adResponse: DTBAdResponse!) {
+        print("-------onSuccess-------")
+        print(adResponse.customTargetting())
+        print(adResponse.customTargetting()["amznslots"])
+        //amznslots amzn_h amzn_b
+        print(adResponse.customTargetting()?.index(forKey: "amznslots"))
+        print(adResponse.customTargetting()?.index(forKey: "amzn_h"))
+        print(adResponse.customTargetting()?.index(forKey: "amzn_b"))
         
+        //self.addCustomKeyword(withKey: <#T##String!#>, value: <#T##String!#>)
         
+        for target in adResponse.customTargetting() {
+            
+            //self.addCustomKeyword(withKey: target.key.description,value: (String) target.value)
+            
+        }
+        //self.addCustomKeyword(withKey: <#T##String!#>, value: <#T##String!#>)
+        
+        //super.loadAd()
         
     }
-    */
     
     
     
@@ -79,6 +99,8 @@ class MediatedAd: ANBannerAdView /*,DTBAdCallback*/ {
     required init?(coder aDecoder: NSCoder) {
         
         self.amzn_SlotUUID = "false"
+        self.azloader = DTBAdLoader()
+        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
         
         super.init(coder: aDecoder)
         
@@ -89,6 +111,8 @@ class MediatedAd: ANBannerAdView /*,DTBAdCallback*/ {
     override init(frame: CGRect) {
         
         self.amzn_SlotUUID = "false"
+        self.azloader = DTBAdLoader()
+        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
         
         super.init(frame: frame)
         
@@ -97,6 +121,8 @@ class MediatedAd: ANBannerAdView /*,DTBAdCallback*/ {
     override init!(frame: CGRect, placementId: String!) {
         
         self.amzn_SlotUUID = "false"
+        self.azloader = DTBAdLoader()
+        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
         
         super.init(frame: frame, placementId: placementId!)
         
@@ -105,6 +131,8 @@ class MediatedAd: ANBannerAdView /*,DTBAdCallback*/ {
     override init!(frame: CGRect, placementId: String!, adSize size: CGSize) {
         
         self.amzn_SlotUUID = "false"
+        self.azloader = DTBAdLoader()
+        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
         
         super.init(frame: frame, placementId: placementId!, adSize:size)
         
@@ -113,6 +141,8 @@ class MediatedAd: ANBannerAdView /*,DTBAdCallback*/ {
     override init!(frame: CGRect, memberId: Int, inventoryCode: String!) {
         
         self.amzn_SlotUUID = "false"
+        self.azloader = DTBAdLoader()
+        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
         
         super.init(frame: frame, memberId: memberId, inventoryCode: inventoryCode!)
         
@@ -121,6 +151,8 @@ class MediatedAd: ANBannerAdView /*,DTBAdCallback*/ {
     override init!(frame: CGRect, memberId: Int, inventoryCode: String!, adSize size: CGSize) {
         
         self.amzn_SlotUUID = "false"
+        self.azloader = DTBAdLoader()
+        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
         
         super.init(frame: frame, memberId: memberId, inventoryCode: inventoryCode!, adSize:size)
         

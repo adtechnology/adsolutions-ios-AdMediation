@@ -8,6 +8,8 @@
 
 import UIKit
 import AppNexusSDK
+import DTBiOSSDK
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //to request ads via ssl
         ANSDKSettings.sharedInstance().httpsEnabled = true
+        
+        //Amazon Appkey
+        DTBAds.sharedInstance().setAppKey("7c71c64f8b454da7aa4705963ae6e40f")
+        //DTBAds.sharedInstance().testMode = true //for testing only
+        
         
         return true
     }

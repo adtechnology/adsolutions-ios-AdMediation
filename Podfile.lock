@@ -1,4 +1,5 @@
 PODS:
+  - AmazonAd (2.2.15.1)
   - AppNexusSDK (4.11):
     - AppNexusSDK/AppNexusSDK (= 4.11)
   - AppNexusSDK/AppNexusSDK (4.11)
@@ -7,19 +8,22 @@ PODS:
   - AWSCore (2.6.30)
 
 DEPENDENCIES:
+  - AmazonAd
   - AppNexusSDK
   - AppNexusSDK/GoogleAdapter
   - AWSCore
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AmazonAd
     - AppNexusSDK
     - AWSCore
 
 SPEC CHECKSUMS:
+  AmazonAd: 9b7226322bc124343d279a98c28cdae26c48a0e7
   AppNexusSDK: c3ca44e94e41bb530b13690417e0230f7b37d87d
   AWSCore: 11e8bb89d8d2e3bb6e31caa8b944ca7dae4c87cd
 
-PODFILE CHECKSUM: c2dfa5440f6c6801934de6990e4da89fad0991c3
+PODFILE CHECKSUM: ed712e5eae056e4bc15387e5e918b86743188166
 
 COCOAPODS: 1.5.3
