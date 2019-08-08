@@ -192,22 +192,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/AppNexusSDK/AppNexusSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppNexusSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

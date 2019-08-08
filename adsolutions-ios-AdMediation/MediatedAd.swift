@@ -26,26 +26,14 @@ class MediatedAd: ANBannerAdView ,DTBAdCallback {
         
         self.amzn_SlotUUID = andSlotUUID
         self.azloader = DTBAdLoader()
-        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: adWidth, height: adHeight, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
+        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: adWidth, height: adHeight, andSlotUUID: andSlotUUID)
         
         super.init(frame:frame, memberId:memberId, inventoryCode:inventoryCode, adSize:CGSize(width:adWidth, height:adHeight))
         
         self.autoRefreshInterval = 0   // Set to 0 to disable auto-refresh.
         
         print("---MediatedAd.init SlotID "+andSlotUUID)
-        
-        
-        
-        
-        
-        
-        
-        
     }
-    
-    
-    
-    
     
     override func loadAd() {
         print("-----Test1-----")
@@ -60,41 +48,30 @@ class MediatedAd: ANBannerAdView ,DTBAdCallback {
         
     }
     func onFailure(_ error: DTBAdError) {
-        print("-----onFailure-----")
-        //super.loadAd()
-        
+        print("-----onFailure----- \(error)")
+        super.loadAd()
     }
     
     
     
     func onSuccess(_ adResponse: DTBAdResponse!) {
         print("-------onSuccess-------")
-        print(adResponse.customTargetting())
-        print(adResponse.customTargetting()["amznslots"])
-        //amznslots amzn_h amzn_b
-        print(adResponse.customTargetting()?.index(forKey: "amznslots"))
-        print(adResponse.customTargetting()?.index(forKey: "amzn_h"))
-        print(adResponse.customTargetting()?.index(forKey: "amzn_b"))
-        
-        //self.addCustomKeyword(withKey: <#T##String!#>, value: <#T##String!#>)
-        
-        for target in adResponse.customTargetting() {
-            
-            //self.addCustomKeyword(withKey: target.key.description,value: (String) target.value)
-            
+      
+      guard let response = adResponse else {
+        return
+      }
+      
+      response.customTargetting()?.forEach({ (key, value) in
+        if let key = key as? String, let value = value as? String {
+          self.addCustomKeyword(withKey: key, value: value)
+          print(" key: \(key) value \(value)")
         }
-        //self.addCustomKeyword(withKey: <#T##String!#>, value: <#T##String!#>)
-        
-        //super.loadAd()
-        
-    }
+      })
+      
+      super.loadAd()
+  }
     
-    
-    
-    
-    
-    
-    
+
     
     required init?(coder aDecoder: NSCoder) {
         
@@ -157,11 +134,6 @@ class MediatedAd: ANBannerAdView ,DTBAdCallback {
         super.init(frame: frame, memberId: memberId, inventoryCode: inventoryCode!, adSize:size)
         
     }
-    
-    
-    
-    
-    
 }
 
 

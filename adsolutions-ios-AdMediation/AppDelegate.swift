@@ -4,7 +4,7 @@
 //
 //  Created by adtech Test on 10.10.18.
 //  Copyright © 2018 Spring Media. All rights reserved.
-//
+// 
 
 import UIKit
 import AppNexusSDK
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Amazon Appkey
         DTBAds.sharedInstance().setAppKey("7c71c64f8b454da7aa4705963ae6e40f")
-        //DTBAds.sharedInstance().testMode = true //for testing only
+        DTBAds.sharedInstance().testMode = true //for testing only
         
         
         return true
