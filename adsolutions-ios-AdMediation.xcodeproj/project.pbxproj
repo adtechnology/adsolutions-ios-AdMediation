@@ -13,6 +13,7 @@
 		944AD6B2216DE94F00B9D08D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B1216DE94F00B9D08D /* Assets.xcassets */; };
 		944AD6B5216DE94F00B9D08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B3216DE94F00B9D08D /* LaunchScreen.storyboard */; };
 		944AD6BD216DEA2100B9D08D /* MediatedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AD6BC216DEA2100B9D08D /* MediatedAd.swift */; };
+		946D9FE1216E3DA60086E930 /* DTBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D9FE0216E3DA60086E930 /* DTBiOSSDK.framework */; };
 		DBE8B4157F602C412B789D5A /* Pods_adsolutions_ios_AdMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		944AD6B4216DE94F00B9D08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		944AD6B6216DE94F00B9D08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944AD6BC216DEA2100B9D08D /* MediatedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediatedAd.swift; sourceTree = "<group>"; };
+		946D9FE0216E3DA60086E930 /* DTBiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTBiOSSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946D9FE1216E3DA60086E930 /* DTBiOSSDK.framework in Frameworks */,
 				DBE8B4157F602C412B789D5A /* Pods_adsolutions_ios_AdMediation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +57,7 @@
 		68787A48F1F8AA5B72DE48B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				946D9FE0216E3DA60086E930 /* DTBiOSSDK.framework */,
 				0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */,
 			);
 			name = Frameworks;
@@ -188,22 +192,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/AppNexusSDK/AppNexusSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppNexusSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -363,6 +360,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "adsolutions-ios-AdMediation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,6 +382,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "adsolutions-ios-AdMediation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

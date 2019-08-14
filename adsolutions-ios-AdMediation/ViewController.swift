@@ -53,8 +53,8 @@ class ViewController: UIViewController {
         
         
         
-        //banner?.addCustomKeyword(withKey: "test", value: "true")
-        
+//        banner?.addCustomKeyword(withKey: "test", value: "true")
+      
         banner?.rootViewController = self;
         
         banner?.autoRefreshInterval = 60   // just for testing
