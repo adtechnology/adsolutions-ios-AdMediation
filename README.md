@@ -2,17 +2,17 @@
 
 Sample Project to showcase Media Impacts optimized multi adserver mediation. This basically uses different features/methods, which could also be implemented modular: Appnexus -Google Mediation, Amazon Prebidding, and Google Facebook Mediation
 
-#Appnexus -Integration
+## Appnexus -Integration
 Documentation on basic appnexus integration could be found here. https://wiki.xandr.com/display/sdk/iOS+v6.0+SDK+Migration+and+Integration
 Information on additional keywords, sizes, parameters and inventoryCodes (Placements) will be provided by Media Impact.
 
-#Appnexus-Google Mediation
+## Appnexus-Google Mediation
 1. the AppNexusSDK GoogleAdapter has to be loaded. https://wiki.xandr.com/display/sdk/Mediate+with+iOS+SDK+v6.0
 2. this also loads the google ads sdk, to use this as  „third party“ insert into info.plist the Flag GADIsAdManagerApp = true (otherwise google will ask for an google admob Id)
 3. additional keyword "content_url", which contains a desktop url corresponding the app view
 -there is no additional code needed, the appnexus adapter controls everything else
 
-#Amazon Prebidding
+## Amazon Prebidding
 To monetize demand from Amazon, we use prebidding. So basically making an adcall to Amazon to get a bid price and then pass the bid to appnexcus. Media Impact only uses 300x250 demand right now. The SDK is provided by amazon, it is not public, but you can download it from this repository. The sdk is called DTBiOSSDK. 
 To implement it you'll get a "App Key" and an "Amazon uuid" from Media Impact.
 1. implement DTB sdk downloaded fro this repository
@@ -33,6 +33,9 @@ self.addCustomKeyword(withKey: key, value: value)
 AppNexusBanner.loadAd()
 }
 )
+
+## Google-Facebook Mediation
+This Feature has to be retested, instructions on implementing will follow
 
 
 
