@@ -47,6 +47,7 @@ class MediatedAd: ANBannerAdView ,DTBAdCallback {
     
     func onFailure(_ error: DTBAdError) {
         print("MediatedAdView Amazon Failure \(error)")
+        self.removeCustomKeyword(withKey: "amznslots")
         super.loadAd()
     }
     
@@ -56,7 +57,7 @@ class MediatedAd: ANBannerAdView ,DTBAdCallback {
      */
     func onSuccess(_ adResponse: DTBAdResponse!) {
         print("MediatedAdView")
-        
+        self.removeCustomKeyword(withKey: "amznslots")
         guard let response = adResponse else {
             return
         }
