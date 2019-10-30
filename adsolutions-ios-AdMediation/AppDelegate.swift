@@ -20,12 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //to request ads via ssl
+        //to request appnexus ads via ssl
         ANSDKSettings.sharedInstance().httpsEnabled = true
         
-        //Amazon Appkey
-        DTBAds.sharedInstance().setAppKey("7c71c64f8b454da7aa4705963ae6e40f")
-        DTBAds.sharedInstance().testMode = true //for testing only
+        //Amazon Appkey nessecary for mediation prebidding, provided by media impact
+        DTBAds.sharedInstance().setAppKey("6d292e101d3741e6adfab413ae50d57d")
+        //for testing only
+        DTBAds.sharedInstance().testMode = true
+        
+        //to enable appnexus debug logging
+        ANLogManager.setANLogLevel(ANLogLevel.all)
         
         
         return true

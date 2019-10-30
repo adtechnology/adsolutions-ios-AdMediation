@@ -9,4 +9,6 @@ use_frameworks!
 pod 'AWSCore'
 pod 'AppNexusSDK'
 pod 'AppNexusSDK/GoogleAdapter'
+pod 'GoogleMobileAdsMediationFacebook'
+
 end

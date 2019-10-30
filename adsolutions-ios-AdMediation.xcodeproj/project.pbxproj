@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,26 @@
 		944AD6B2216DE94F00B9D08D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B1216DE94F00B9D08D /* Assets.xcassets */; };
 		944AD6B5216DE94F00B9D08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B3216DE94F00B9D08D /* LaunchScreen.storyboard */; };
 		944AD6BD216DEA2100B9D08D /* MediatedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AD6BC216DEA2100B9D08D /* MediatedAd.swift */; };
-		946D9FE1216E3DA60086E930 /* DTBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946D9FE0216E3DA60086E930 /* DTBiOSSDK.framework */; };
+		AD2B3AAD23604B0800745983 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2B3AAC23604B0800745983 /* BannerAd.swift */; };
+		AD88D9602328E217009CC65C /* DTBiOSSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */; };
+		AD88D9642328E903009CC65C /* DTBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */; };
+		AD88D9652328E903009CC65C /* DTBiOSSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBE8B4157F602C412B789D5A /* Pods_adsolutions_ios_AdMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD88D9662328E904009CC65C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AD88D9652328E903009CC65C /* DTBiOSSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_adsolutions_ios_AdMediation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,7 +46,8 @@
 		944AD6B4216DE94F00B9D08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		944AD6B6216DE94F00B9D08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944AD6BC216DEA2100B9D08D /* MediatedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediatedAd.swift; sourceTree = "<group>"; };
-		946D9FE0216E3DA60086E930 /* DTBiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTBiOSSDK.framework; sourceTree = "<group>"; };
+		AD2B3AAC23604B0800745983 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTBiOSSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				946D9FE1216E3DA60086E930 /* DTBiOSSDK.framework in Frameworks */,
+				AD88D9642328E903009CC65C /* DTBiOSSDK.framework in Frameworks */,
 				DBE8B4157F602C412B789D5A /* Pods_adsolutions_ios_AdMediation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,7 +75,7 @@
 		68787A48F1F8AA5B72DE48B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				946D9FE0216E3DA60086E930 /* DTBiOSSDK.framework */,
+				AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */,
 				0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */,
 			);
 			name = Frameworks;
@@ -91,6 +109,7 @@
 				944AD6B1216DE94F00B9D08D /* Assets.xcassets */,
 				944AD6B3216DE94F00B9D08D /* LaunchScreen.storyboard */,
 				944AD6B6216DE94F00B9D08D /* Info.plist */,
+				AD2B3AAC23604B0800745983 /* BannerAd.swift */,
 			);
 			path = "adsolutions-ios-AdMediation";
 			sourceTree = "<group>";
@@ -107,6 +126,8 @@
 				944AD6A4216DE94D00B9D08D /* Frameworks */,
 				944AD6A5216DE94D00B9D08D /* Resources */,
 				BD75244AB9CDA398F67B8F75 /* [CP] Embed Pods Frameworks */,
+				AD88D9662328E904009CC65C /* Embed Frameworks */,
+				CACB4F93B66F615811B89E6D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD88D9602328E217009CC65C /* DTBiOSSDK.framework in Resources */,
 				944AD6B5216DE94F00B9D08D /* LaunchScreen.storyboard in Resources */,
 				944AD6B2216DE94F00B9D08D /* Assets.xcassets in Resources */,
 				944AD6B0216DE94D00B9D08D /* Main.storyboard in Resources */,
@@ -203,6 +225,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CACB4F93B66F615811B89E6D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-adsolutions-ios-AdMediation/Pods-adsolutions-ios-AdMediation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -210,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2B3AAD23604B0800745983 /* BannerAd.swift in Sources */,
 				944AD6AD216DE94D00B9D08D /* ViewController.swift in Sources */,
 				944AD6AB216DE94D00B9D08D /* AppDelegate.swift in Sources */,
 				944AD6BD216DEA2100B9D08D /* MediatedAd.swift in Sources */,
@@ -289,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -344,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

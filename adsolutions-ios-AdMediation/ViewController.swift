@@ -7,31 +7,30 @@
 //
 
 import UIKit
+import AppNexusSDK
 
 class ViewController: UIViewController {
-
+    
+    //MARK: Properties
+    
+    @IBOutlet weak var reloadButton: UIButton!
+    @IBOutlet weak var adListe: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        //add reloadbutton here..... todo
+        reloadButton.layer.borderColor = UIColor.red.cgColor
         
-        label.center = CGPoint(x: 160, y: 85)
         
-        label.textAlignment = .center
-        
-        label.text = "I'am a test label"
-        
-        self.view.addSubview(label)
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        // Get the screen size so we can center our 300x50 example ad.
+        // Get the screen size so we can center our 300x250 example ad.
         
         let  screenRect  = UIScreen.main.bounds
         
         let  centerX     = (screenRect.size.width / 2) - 150
-        
+        //let  centerX     = 0
         let  centerY     = (screenRect.size.height / 2) - 125
+        //let  centerY     = 0
         
         
         
@@ -49,21 +48,19 @@ class ViewController: UIViewController {
         
         // Create the banner ad view and add it as a subview.
         
-        let  banner:MediatedAd?  = MediatedAd(frame:rect, memberId:7823, inventoryCode:"adtechnology.axelspringer.de-app-test-mediation_index-mrec", adWidth:adWidth, adHeight:adHeight, andSlotUUID: "63c4c4c6-1e0b-4666-b8cd-7994163e0552")
+        let  banner:MediatedAd?  = MediatedAd(frame:rect, memberId:7823, inventoryCode:"adtechnology.axelspringer.de-app-test-mediation_index-mrec", adSize:CGSize(width:adWidth, height:adHeight))
         
-        
-        
-//        banner?.addCustomKeyword(withKey: "test", value: "true")
-      
+        banner?.setAmznSlotUUID(slotUUID: "21bc393b-edef-4f00-9664-5125dd3c52e7")
         banner?.rootViewController = self;
         
         banner?.autoRefreshInterval = 60   // just for testing
-        
-        self.view.addSubview(banner!)
-        
+
+        adListe.addSubview(banner!)
+
         // Load an ad!
         
         banner?.loadAd()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
