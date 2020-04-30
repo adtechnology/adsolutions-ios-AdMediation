@@ -8,6 +8,7 @@
 
 import UIKit
 import AppNexusSDK
+import DTBiOSSDK
 
 class ViewController: UIViewController {
     
@@ -48,18 +49,18 @@ class ViewController: UIViewController {
         
         // Create the banner ad view and add it as a subview.
         
-        let  banner:MediatedAd?  = MediatedAd(frame:rect, memberId:7823, inventoryCode:"adtechnology.axelspringer.de-app-test-mediation_index-mrec", adSize:CGSize(width:adWidth, height:adHeight))
+        let  banner:MediatedAd  = MediatedAd(frame:rect, memberId:7823, inventoryCode:"adtechnology.axelspringer.de-app-test-mediation_index-mrec", adSize:CGSize(width:adWidth, height:adHeight))
         
-        banner?.setAmznSlotUUID(slotUUID: "21bc393b-edef-4f00-9664-5125dd3c52e7")
-        banner?.rootViewController = self;
+        banner.addAmazonSize(amazonSize:DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: "21bc393b-edef-4f00-9664-5125dd3c52e7"))
+        banner.rootViewController = self;
         
-        banner?.autoRefreshInterval = 60   // just for testing
+        banner.autoRefreshInterval = 60   // just for testing
 
-        adListe.addSubview(banner!)
+        adListe.addSubview(banner)
 
         // Load an ad!
         
-        banner?.loadAd()
+        banner.loadAd()
 
         // Do any additional setup after loading the view, typically from a nib.
     }

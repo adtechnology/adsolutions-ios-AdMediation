@@ -20,23 +20,30 @@ import DTBiOSSDK
  */
 class MediatedAd: ANBannerAdView ,DTBAdCallback {
     
-    var amzn_SlotUUID:String? //= "21bc393b-edef-4f00-9664-5125dd3c52e7"
-    var azloader:DTBAdLoader?
-    var azsize:DTBAdSize?
+    //var amzn_SlotUUID:String? //= "21bc393b-edef-4f00-9664-5125dd3c52e7"
+    //var azloader:DTBAdLoader?
+    //var azsize:DTBAdSize?
+    //var ArrayList<DTBAdSize>;// azSizes = new ArrayList<DTBAdSize>();
+    var amazonSizes = [DTBAdSize]()
+    
+    
     /*
-     * set AmznSlotUUID --> sets amazon slot uuid and ads 300x250 call before appnexus asdcall
-     */
-    func setAmznSlotUUID(slotUUID:String){
-        self.amzn_SlotUUID = slotUUID
-        self.azsize = DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: slotUUID)
-        self.azloader = DTBAdLoader()
-        self.azloader?.setAdSizes([self.azsize])
+     * add the sizes amazon prebidding should be done (size + uuid to create a DTBAdSize you get from MI)
+    */
+    func addAmazonSize(amazonSize:DTBAdSize){
+        self.amazonSizes.append(amazonSize);
     }
+    
+    /*
+     * override loadAd func to ad Amazon Prebidding
+     */
     override func loadAd() {
-        if var azloader = self.azloader{
-            print("does amazon adcall BannerAd.setAmznUUID")
-            self.azloader?.loadAd(self)
+        if(!amazonSizes.isEmpty){
+            let azloader = DTBAdLoader()
+            azloader.setAdSizes(amazonSizes)
+            azloader.loadAd(self)
         }
+        
         else{
             print("does without amazon")
             super.loadAd()

@@ -13,7 +13,6 @@
 		944AD6B2216DE94F00B9D08D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B1216DE94F00B9D08D /* Assets.xcassets */; };
 		944AD6B5216DE94F00B9D08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B3216DE94F00B9D08D /* LaunchScreen.storyboard */; };
 		944AD6BD216DEA2100B9D08D /* MediatedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AD6BC216DEA2100B9D08D /* MediatedAd.swift */; };
-		AD2B3AAD23604B0800745983 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2B3AAC23604B0800745983 /* BannerAd.swift */; };
 		AD88D9602328E217009CC65C /* DTBiOSSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */; };
 		AD88D9642328E903009CC65C /* DTBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */; };
 		AD88D9652328E903009CC65C /* DTBiOSSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -46,7 +45,6 @@
 		944AD6B4216DE94F00B9D08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		944AD6B6216DE94F00B9D08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944AD6BC216DEA2100B9D08D /* MediatedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediatedAd.swift; sourceTree = "<group>"; };
-		AD2B3AAC23604B0800745983 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTBiOSSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +107,6 @@
 				944AD6B1216DE94F00B9D08D /* Assets.xcassets */,
 				944AD6B3216DE94F00B9D08D /* LaunchScreen.storyboard */,
 				944AD6B6216DE94F00B9D08D /* Info.plist */,
-				AD2B3AAC23604B0800745983 /* BannerAd.swift */,
 			);
 			path = "adsolutions-ios-AdMediation";
 			sourceTree = "<group>";
@@ -150,6 +147,7 @@
 				TargetAttributes = {
 					944AD6A6216DE94D00B9D08D = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -249,7 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD2B3AAD23604B0800745983 /* BannerAd.swift in Sources */,
 				944AD6AD216DE94D00B9D08D /* ViewController.swift in Sources */,
 				944AD6AB216DE94D00B9D08D /* AppDelegate.swift in Sources */,
 				944AD6BD216DEA2100B9D08D /* MediatedAd.swift in Sources */,
@@ -411,7 +408,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.spring.adtechnology.adsolutions-ios-AdMediation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -433,7 +430,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.spring.adtechnology.adsolutions-ios-AdMediation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
