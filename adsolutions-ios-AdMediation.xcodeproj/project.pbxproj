@@ -13,9 +13,6 @@
 		944AD6B2216DE94F00B9D08D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B1216DE94F00B9D08D /* Assets.xcassets */; };
 		944AD6B5216DE94F00B9D08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B3216DE94F00B9D08D /* LaunchScreen.storyboard */; };
 		944AD6BD216DEA2100B9D08D /* MediatedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AD6BC216DEA2100B9D08D /* MediatedAd.swift */; };
-		AD88D9602328E217009CC65C /* DTBiOSSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */; };
-		AD88D9642328E903009CC65C /* DTBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */; };
-		AD88D9652328E903009CC65C /* DTBiOSSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBE8B4157F602C412B789D5A /* Pods_adsolutions_ios_AdMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AD88D9652328E903009CC65C /* DTBiOSSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,7 +41,6 @@
 		944AD6B4216DE94F00B9D08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		944AD6B6216DE94F00B9D08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944AD6BC216DEA2100B9D08D /* MediatedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediatedAd.swift; sourceTree = "<group>"; };
-		AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTBiOSSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD88D9642328E903009CC65C /* DTBiOSSDK.framework in Frameworks */,
 				DBE8B4157F602C412B789D5A /* Pods_adsolutions_ios_AdMediation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +67,6 @@
 		68787A48F1F8AA5B72DE48B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AD88D95D2327EFDA009CC65C /* DTBiOSSDK.framework */,
 				0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */,
 			);
 			name = Frameworks;
@@ -174,7 +167,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD88D9602328E217009CC65C /* DTBiOSSDK.framework in Resources */,
 				944AD6B5216DE94F00B9D08D /* LaunchScreen.storyboard in Resources */,
 				944AD6B2216DE94F00B9D08D /* Assets.xcassets in Resources */,
 				944AD6B0216DE94D00B9D08D /* Main.storyboard in Resources */,

@@ -10,5 +10,6 @@ pod 'AWSCore'
 pod 'AppNexusSDK', '~> 7.2'
 pod 'AppNexusSDK/GoogleAdapter'
 pod 'GoogleMobileAdsMediationFacebook'
+pod 'AmazonPublisherServicesSDK'
 
 end
