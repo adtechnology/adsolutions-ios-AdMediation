@@ -1,7 +1,7 @@
 # InApp Settings for IAB TCF 2.0 Compliance 
 
 ## Xandr
-Xandr ist full TCF 2.0 compliant. Please be sure the newest Xandr SDK is installed. If the app has a lower version than 7.3 you must update the SDK.
+Xandr ist full TCF 2.0 compliant. Please be sure the newest Xandr SDK is installed. If the app has a lower version than 7.3 you must update the SDK. There is a global settig for the sdk, which has to be done (iOS: [ANGDPRSettings setConsentRequired:true]; Android: ANGDPRSettings.setConsentRequired(context,true);)
 
 ## Google Ad Manager (Mediation)
 Currently is GAM not TCF 2.0 compliant. Until they release a TCF 2.0 SDK Compatible we should use the following workaround:
@@ -70,4 +70,4 @@ vendorType: "CUSTOM"
 _id: "5e716fc09a0b5040d575080f"
 ```
 
-Please check in the grants of Vendor "5e716fc09a0b5040d575080f" if is "vendorGrant: true", if it is "false" please don't execute the Facebook Ad SDK.
+Please check in the grants of Vendor "5e716fc09a0b5040d575080f" if is "vendorGrant: true", if it is "false" please pass the additional Keyword (still tbd) to appnexus.
