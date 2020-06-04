@@ -70,4 +70,4 @@ vendorType: "CUSTOM"
 _id: "5e716fc09a0b5040d575080f"
 ```
 
-Please check in the grants of Vendor "5e716fc09a0b5040d575080f" if is "vendorGrant: true", if it is "false" please pass the additional Keyword (still tbd) to appnexus.
+Please check in the grants of Vendor "5e716fc09a0b5040d575080f" if is "vendorGrant: true" and pass it as keyword "gdprfbk" to appnexus BannerView.addCustomKeyword(withKey: "gdprfbk", value: "1 or 0")
