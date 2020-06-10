@@ -6,31 +6,28 @@ Xandr ist full TCF 2.0 compliant. Please be sure the newest Xandr SDK is install
 ## Google Ad Manager (Mediation)
 Currently is GAM not TCF 2.0 compliant. Until they release a TCF 2.0 SDK Compatible we should use the following workaround:
 
-### The CMP has a Custom Vender "Google Ad Manager":
+### The CMP has a Custom Vendor "Google Ad Manager":
 
 ```
 16:
 name: "Google Ad Manager"
 vendorType: "CUSTOM"
-_id: "5e74df5ff443bb795772df9c"
+_id: "5e74df5ff443bb795772df9c" 
 ```
 
-### For this Vendor you should find the "grants":
+### For this Vendor We need all purposes except 5,6 and 8.
 
 ```
-5e74df5ff443bb795772df9c:
-purposeGrants:
-    5e8794bab31ef52cd96cde4a: true
-    5e8794bab31ef52cd96cde4b: true
-    5e8794bab31ef52cd96cde4c: true
-    5e8794bab31ef52cd96cde44: true
-    5e8794bab31ef52cd96cde45: true
-    5e8794bab31ef52cd96cde46: true
-    5e8794bab31ef52cd96cde47: true
-    5e8794bab31ef52cd96cde48: true
-    5e8794bab31ef52cd96cde49: true
-    5e8794bab31ef52cd96cde53: true
-    5ecab9b73d64c86bc9fe2b34: true
+Google Ad Manager
+vendorId: "5e74df5ff443bb795772df9c"
+purposeGrants: 
+"Purpose 1 - ID Unique for Publisher", // Store and/or access information on a device "1"
+"Purpose 2 - ID Unique for Publisher", // Select basic ads "2",
+"Purpose 3 - ID Unique for Publisher", // Create a personalised ads profile "3",
+"Purpose 4 - ID Unique for Publisher", // Select personalised ads "4",
+"Purpose 7 - ID Unique for Publisher", // Measure ad performance "7",
+"Purpose 9 - ID Unique for Publisher" // Apply market research to generate audience insights (Purpose 9)
+"Purpose 10 - ID Unique for Publisher", // Develop and improve products "10"
 __proto__: Object
    vendorGrant: true
 ```
