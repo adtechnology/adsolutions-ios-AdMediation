@@ -5,6 +5,7 @@ Xandr ist full TCF 2.0 compliant. Please be sure the newest Xandr SDK is install
 
 ## Google Ad Manager (Mediation)
 Currently is GAM not TCF 2.0 compliant. Until they release a TCF 2.0 SDK Compatible we should use the following workaround:
+(please use Appnexus Google Mediation SDK >= 7.5)
 
 ### The CMP has a Custom Vendor "Google Ad Manager":
 
@@ -43,6 +44,7 @@ e.g.: BannerView.addCustomKeyword(withKey: "npa", value: "1")
 
 ## Amazon
 Amazon isn't supporting officially TCF 2.0 but they read automatically the Consent String. That is why Amazon has to be switched off when the Amazon Vendor is switched off.
+(please use Amazon Publisher SDK >=3.3)
 
 ### The CMP has the "Amazon.com, Inc." custom Vendor:
 
@@ -68,3 +70,5 @@ _id: "5e716fc09a0b5040d575080f"
 ```
 
 Please check in the grants of Vendor "5e716fc09a0b5040d575080f" if is "vendorGrant: true" and pass it as keyword "gdprfbk" to appnexus e.g.: BannerView.addCustomKeyword(withKey: "gdprfbk", value: "1 or 0")
+
+
