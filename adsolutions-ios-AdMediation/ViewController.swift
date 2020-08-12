@@ -9,6 +9,8 @@
 import UIKit
 import AppNexusSDK
 import DTBiOSSDK
+import CriteoPublisherSdk
+
 
 class ViewController: UIViewController {
     
@@ -16,6 +18,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var reloadButton: UIButton!
     @IBOutlet weak var adListe: UIStackView!
+    
+    var  banner:MediatedAd?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,21 +53,36 @@ class ViewController: UIViewController {
         
         // Create the banner ad view and add it as a subview.
         
-        let  banner:MediatedAd  = MediatedAd(frame:rect, memberId:7823, inventoryCode:"adtechnology.axelspringer.de-app-test-mediation_index-mrec", adSize:CGSize(width:adWidth, height:adHeight))
+        self.banner  = MediatedAd(frame:rect, memberId:7823, inventoryCode:"adtechnology.axelspringer.de-app-test-mediation_index-mrec", adSize:CGSize(width:adWidth, height:adHeight))
         
-        banner.addAmazonSize(amazonSize:DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: "21bc393b-edef-4f00-9664-5125dd3c52e7"))
-        banner.rootViewController = self;
+        banner!.addAmazonSize(amazonSize:DTBAdSize.init(bannerAdSizeWithWidth: 300, height: 250, andSlotUUID: "21bc393b-edef-4f00-9664-5125dd3c52e7"))
+        banner!.rootViewController = self;
         
-        banner.autoRefreshInterval = 60   // just for testing
+        //criteo part
+        banner!.setCriteoBannerAdUnit(criteoBannerAdUnit: CRBannerAdUnit.init(adUnitId: "30s6zt3ayypfyemwjvmp", size: CGSize.init(width: 300, height: 250)));
+        
+        banner!.autoRefreshInterval = 0   // just for testing
 
-        adListe.addSubview(banner)
+        adListe.addSubview(banner!)
+        
+        //Testing with KEywrds
+        //banner!.addCustomKeyword(withKey: "test", value: "criteo")
 
         // Load an ad!
         
-        banner.loadAd()
+        banner!.loadAd()
 
         // Do any additional setup after loading the view, typically from a nib.
+        
+        reloadButton.addTarget(self, action: Selector("reloadClicked:"), for: .touchUpInside)
     }
+    
+    
+    @objc func reloadClicked(_ sender: UIButton){
+        print("reloadClicked")
+        self.banner!.loadAd()
+    }
+    
 
 }
 

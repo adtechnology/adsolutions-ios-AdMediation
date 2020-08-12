@@ -9,11 +9,12 @@
 import UIKit
 import AppNexusSDK
 import DTBiOSSDK
-
+import CriteoPublisherSdk
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
     var window: UIWindow?
 
 
@@ -21,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //to request appnexus ads via ssl
-        ANSDKSettings.sharedInstance().httpsEnabled = true
+        //ANSDKSettings.sharedInstance().httpsEnabled = true
         
         //Amazon Appkey nessecary for mediation prebidding, provided by media impact
         DTBAds.sharedInstance().setAppKey("6d292e101d3741e6adfab413ae50d57d")
@@ -30,6 +31,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //to enable appnexus debug logging
         ANLogManager.setANLogLevel(ANLogLevel.all)
+        
+        //Criteo Setup
+        let criteoPublisherId: String = "B-048188" // Provided by criteo
+
+        // Reference to singleton shared instance of Criteo SDK
+        let criteoSdk : Criteo = Criteo.shared()
+
+        // Create AdUnit(s) that correspond to the display sizes the app wishes to monetize
+        //let bannerAdUnit: CRBannerAdUnit = CRBannerAdUnit.init(adUnitId: "adtechnology.axelspringer.de-app-test-mediation_story-banner", size: CGSize.init(width: 300, height: 250))
+        let bannerAdUnit: CRBannerAdUnit = CRBannerAdUnit.init(adUnitId: "30s6zt3ayypfyemwjvmp", size: CGSize.init(width: 300, height: 250))
+
+    
+        let adUnits = [bannerAdUnit]
+
+        // Register Criteo SDK
+        criteoSdk.registerPublisherId(criteoPublisherId, with: adUnits)
+        
+        
         
         
         return true
