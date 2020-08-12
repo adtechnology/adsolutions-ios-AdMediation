@@ -13,7 +13,7 @@ Information on additional keywords, sizes, parameters and inventoryCodes (Placem
 -there is no additional code needed, the appnexus adapter controls everything else
 
 ## Amazon Prebidding
-To monetize demand from Amazon, we use prebidding. So basically making an adcall to Amazon to get a bid price and then pass the bid to appnexcus. Media Impact only uses 300x250 demand right now. The SDK is provided by amazon, it is not public, but you can download it from this repository. The sdk is called DTBiOSSDK. 
+To monetize demand from Amazon, we use prebidding. So basically making an adcall to Amazon to get a bid price and then pass the bid to appnexcus. Media Impact only uses 300x250 demand right now. The SDK is provided by amazon, it is now available via Cocoapods (AmazonPublisherServicesSDK). 
 To implement it you'll get a "App Key" and an "Amazon uuid" from Media Impact.
 1. implement DTB sdk downloaded fro this repository
 2. during app initialization init amazon sdk with app key: DTBAds.sharedInstance().setAppKey("6d292e101d3741e6adfab413ae50d57d"))
