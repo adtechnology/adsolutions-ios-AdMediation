@@ -7,7 +7,7 @@ use_frameworks!
 
 # Pods for adsolutions-ios-AdMediation
 #pod 'AWSCore'
-pod 'AppNexusSDK', '~> 7.3.2'
+pod 'AppNexusSDK', '~> 7.5'
 pod 'AppNexusSDK/GoogleAdapter'
 pod 'GoogleMobileAdsMediationFacebook'
 pod 'AmazonPublisherServicesSDK', '~> 3.3.0'

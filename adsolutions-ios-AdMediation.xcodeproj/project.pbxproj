@@ -13,6 +13,8 @@
 		944AD6B2216DE94F00B9D08D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B1216DE94F00B9D08D /* Assets.xcassets */; };
 		944AD6B5216DE94F00B9D08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944AD6B3216DE94F00B9D08D /* LaunchScreen.storyboard */; };
 		944AD6BD216DEA2100B9D08D /* MediatedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AD6BC216DEA2100B9D08D /* MediatedAd.swift */; };
+		AD0B57E724E4348400B185E2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD0B57E624E4348400B185E2 /* README.md */; };
+		AD0B57E924E4349B00B185E2 /* gdpr.md in Resources */ = {isa = PBXBuildFile; fileRef = AD0B57E824E4349B00B185E2 /* gdpr.md */; };
 		DBE8B4157F602C412B789D5A /* Pods_adsolutions_ios_AdMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBBCAEC2420CC3B12C0A05D /* Pods_adsolutions_ios_AdMediation.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		944AD6B4216DE94F00B9D08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		944AD6B6216DE94F00B9D08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		944AD6BC216DEA2100B9D08D /* MediatedAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediatedAd.swift; sourceTree = "<group>"; };
+		AD0B57E624E4348400B185E2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AD0B57E824E4349B00B185E2 /* gdpr.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = gdpr.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 		944AD69E216DE94D00B9D08D = {
 			isa = PBXGroup;
 			children = (
+				AD0B57E824E4349B00B185E2 /* gdpr.md */,
+				AD0B57E624E4348400B185E2 /* README.md */,
 				944AD6A9216DE94D00B9D08D /* adsolutions-ios-AdMediation */,
 				944AD6A8216DE94D00B9D08D /* Products */,
 				1FDE2925B209BEAF12C8F081 /* Pods */,
@@ -169,6 +175,8 @@
 			files = (
 				944AD6B5216DE94F00B9D08D /* LaunchScreen.storyboard in Resources */,
 				944AD6B2216DE94F00B9D08D /* Assets.xcassets in Resources */,
+				AD0B57E924E4349B00B185E2 /* gdpr.md in Resources */,
+				AD0B57E724E4348400B185E2 /* README.md in Resources */,
 				944AD6B0216DE94D00B9D08D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
